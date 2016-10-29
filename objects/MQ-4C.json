@@ -1,0 +1,10 @@
+{
+	"name": "MQ-4C",
+	"type": ["air","unmanned"],
+	"aircraft": {
+		"armaments": "none",
+		"sensors": ["AN/ZPY-3","EO/IR"],
+		"max_speed": "575km/h",
+		"range": "15186km"
+	}
+}

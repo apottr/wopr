@@ -1,0 +1,10 @@
+{
+ "name": "Pershing II",
+ "type": ["Sea","ICBM"],
+ "missile": {
+    "speed": 500,
+    "size": 1
+    "profile": "cone",
+    "damage_range": ["5kt","80kt"]
+ }
+}

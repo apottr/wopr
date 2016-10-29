@@ -1,0 +1,10 @@
+{
+ "name": "KH-11",
+ "type": ["Sensor","Space"],
+ "sensor": {
+    "geostationary": true,
+    "resolution_per_pixel": "3m",
+    "bands": ["visible","infrared"],
+    "sq_size": "1km"
+ }
+}

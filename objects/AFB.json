@@ -1,0 +1,15 @@
+{
+	"name": "No-Name AFB",
+	"type": ["land", "air_force_base"],
+	"capabilties": {
+		"24hr_ready": false,
+		"inventory": {
+			"missiles": 0,
+			"sensors": ["SOLARWIND"],
+			"aircraft": ["F-18","MQ-4C","MQ-9"],
+			"vehicles": ["truck"],
+		},
+		"population": 1200,
+		"priority_target": false
+	}
+}

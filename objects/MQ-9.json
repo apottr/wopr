@@ -1,0 +1,13 @@
+{
+	"name": "MQ-9",
+	"type": ["unmanned","air"],
+	"aircraft": {
+		"armaments": {
+			"missiles": [{"warhead": "HEAT", "name": "AGM-114"}],
+			"guns": null,
+			"bombs": null
+		},
+		"max_speed": "482km/h",
+		"range": "1852km"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"name": "F-18",
+	"type": ["air","manned"],
+	"aircraft": {
+		"armaments": {
+			"missiles": [{"warhead": "WDU-33", "name": "AIM-120 AAMRAM"}],
+			"guns": [{"round": "20mm", "name": "M61A1 Vulcan", "magazine": "578"}],
+			"bombs": [{"warhead": "B61", "name": "B61"}]
+		},
+		"range": "2000km",
+		"max_speed": "1915km/h",
+		"sensors": ["ROVER","APG-73"]
+	}
+}

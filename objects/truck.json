@@ -1,0 +1,10 @@
+{
+	"name": "truck",
+	"type": ["land","manned"],
+	"vehicle": {
+		"weapons": null,
+		"range": "15km",
+		"max_speed": "193kmh"
+	},
+
+}

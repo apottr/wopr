@@ -3,12 +3,12 @@ from uuid import uuid4
 import sqlite3,re,time
 
 app = Flask(__name__)
-database = 'general.db'
+database = 'wopr.db'
 
 def init_db():
 	con = sqlite3.connect(database)
 	c = con.cursor()
-	c.execute('CREATE TABLE IF NOT EXISTS ttbl (key TEXT, country TEXT)')
+	c.execute('CREATE TABLE IF NOT EXISTS general (key TEXT, country TEXT)')
 	con.commit()
 	con.close()
 
@@ -17,13 +17,13 @@ def index():
 	try:
 		con = sqlite3.connect(database)
 		c = con.cursor()
-		c.execute('SELECT * FROM ttbl')
+		c.execute('SELECT * FROM general')
 		r = c.fetchall()
 		con.commit()
 		con.close()
 		return str({"status": "success", "time": time.ctime(), "DEFCON": 5, "competitors": r})+"\n"
-	except:
-		return str({"status": "error", "text": "database error"})+"\n"
+	except Exception as e:
+		return str({"status": "error", "text": str(e)})+"\n"
 	#return render_template('map.html')
 
 @app.route('/key')
@@ -32,37 +32,30 @@ def generate_new_key():
 	try:
 		con = sqlite3.connect(database)
 		c = con.cursor()
-		c.execute('INSERT INTO ttbl (key) VALUES (?)',(str(k),))
+		c.execute('INSERT INTO general (key) VALUES (?)',(str(k),))
 		con.commit()
 		con.close()
 		return str({"status": "success", "text": str(k)})+"\n"
 	except Exception as e:
 		return str({"status": "error", "text": str(e)})+"\n"
 
-@app.route('/new_bot/country/<country>/<key>')
+@app.route('/new_bot/country/<country>/<uuid:key>')
 def bot_create_country(country,key):
 	if key and country and (country != 'ussr' or country != 'usa'):
 		try:
 			con = sqlite3.connect(database)
 			c = con.cursor()
-			c.execute('UPDATE ttbl SET country=? WHERE key=?',(country,key))
+			c.execute('UPDATE general SET country=? WHERE key=?',(country,key))
 			con.commit()
 			con.close()
 			return str({"status": "success", "text": "Successfully created {} as {}.".format(key,country)})+"\n"
-		except:
-			return str({"status": "error", "text": "SQLite3 Create Country Query failed."})+"\n"
+		except Exception as e:
+			return str({"status": "error", "text": str(e)})+"\n"
 	else:
 		return str({"status": "error", "text": "Arguments invalid"})+"\n"
 
-@app.route('/move_<thing>/<mgrs>/<key>')
-def move_thing(thing,mgrs,key):
-	if mgrs:
-		if re.match(r'^\d{1,2}[^ABIOYZabioyz][A-Za-z]{2}([0-9][0-9])+$',mgrs):
-			return str({"status": "success", "text": "valid MGRS, nothing more."})+"\n"
-		else:
-			return str({"status": "error", "text": "invalid MGRS"})+"\n"
-	else:
-		return str({"status": "error", "text": "grid coordinate not provided"})+"\n"
+app.add_url_rule('/geo/move/<thing>/<mgrs>/<rate>/<key>',)
+app.add_url_rule('/')
 
 if __name__ == "__main__":
 	init_db()
