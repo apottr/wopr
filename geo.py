@@ -28,6 +28,7 @@ def lookup(mgrs):
 	r = c.fetchall()
 	con.commit()
 	con.close()
+	return r
 
 def _move(obj,from_mgrs,to_mgrs):
 	con = sqlite3.connect(geodb)
