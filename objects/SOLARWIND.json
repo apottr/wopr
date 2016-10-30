@@ -1,0 +1,10 @@
+{
+	"name": "SOLARWIND",
+	"type": ["sensor","land"],
+	"sensor": {
+		"type": "antenna",
+		"radius": "360deg",
+		"range": "15km",
+		"bands": ["K","X"],
+	}
+}
