@@ -60,9 +60,17 @@ def in_mgrs_range(mgrs,start,end):
 	num_in = (numbers in range(start[:-1],end[:-1]))
 	return letter_in and num_in
 
-def valid_placement(object,mgrs,side):
-	pass
-
+def valid_placement(obj,mgrs,side):
+	land = json.loads(open('./objects/land.json').read())
+	m_obj = mgrs_to_object(mgrs)
+	if 'air' in obj['type']:
+		pass
+	elif 'sea' in obj['type']:
+		pass
+	elif 'land' in obj['type']:
+		pass
+	elif 'space' in json['type']:
+		
 def move(obj,from_mgrs,to_mgrs,rate):
 	pass
 
