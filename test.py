@@ -1,11 +1,4 @@
-from flask import Flask
+print "hello world"
 
-app = Flask(__name__)
-
-def index(one,two):
-	return str([one,two])
-
-app.add_url_rule('/<one>/<two>','index',index)
-
-if __name__ == "__main__":
-	app.run()
+def test(one):
+	print one
