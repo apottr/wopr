@@ -1,0 +1,111 @@
+{
+	"A": [
+		{"tile_start": "1A", "tile_end": "30A", "side": null}
+	],
+	"B": [
+		{"tile_start": "30B", "tile_end": "60B", "side": null}
+	],
+	"C": [
+		{"tile_start": "6C", "tile_end": "21C", "side": null},
+		{"tile_start": "26C", "tile_end": "57C", "side": null}
+	],
+	"D": [
+		{"tile_start": "20D", "tile_end": "20D", "side": null},
+		{"tile_start": "38D", "tile_end": "42D", "side": null},
+		{"tile_start": "44D", "tile_end": "56D", "side": null}
+	],
+	"F": [
+		{"tile_start": "18F", "tile_end": "19F", "side": null}
+	],
+	"G": [
+		{"tile_start": "18G", "tile_end": "19G", "side": null}
+	],
+	"H": [
+		{"tile_start": "19H", "tile_end": "21H", "side": null},
+		{"tile_start": "54H", "tile_end": "55H", "side": null}
+	],
+	"J": [
+		{"tile_start": "19J", "tile_end": "22J", "side": null},
+		{"tile_start": "33J", "tile_end": "36J", "side": null},
+		{"tile_start": "50J", "tile_end": "56J", "side": null}
+	],
+	"K": [
+		{"tile_start": "19K", "tile_end": "23K", "side": null},
+		{"tile_start": "33K", "tile_end": "36K", "side": null},
+		{"tile_start": "38K", "tile_end": "38K", "side": null},
+		{"tile_start": "50K", "tile_end": "55K", "side": null}
+	],
+	"L": [
+		{"tile_start": "18L", "tile_end": "24L", "side": null},
+		{"tile_start": "33L", "tile_end": "37L", "side": null},
+		{"tile_start": "52L", "tile_end": "53L", "side": null}
+	],
+	"M": [
+		{"tile_start": "17M", "tile_end": "24M", "side": null},
+		{"tile_start": "33M", "tile_end": "37M", "side": null},
+		{"tile_start": "48M", "tile_end": "54M", "side": null}
+	],
+	"N": [
+		{"tile_start": "18N", "tile_end": "22N", "side": null},
+		{"tile_start": "29N", "tile_end": "38N", "side": null},
+		{"tile_start": "47N", "tile_end": "50N", "side": null}
+	],
+	"P": [
+		{"tile_start": "16P", "tile_end": "16P", "side": null},
+		{"tile_start": "28P", "tile_end": "39P", "side": null},
+		{"tile_start": "43P", "tile_end": "44P", "side": null},
+		{"tile_start": "47P", "tile_end": "48P", "side": null},
+		{"tile_start": "51P", "tile_end": "51P", "side": null}
+	],
+	"Q": [
+		{"tile_start": "13Q", "tile_end": "18Q", "side": null},
+		{"tile_start": "28Q", "tile_end": "40Q", "side": null},
+		{"tile_start": "43Q", "tile_end": "49Q", "side": null}
+	],
+	"R": [
+		{"tile_start": "11R", "tile_end": "17R", "side": "US"},
+		{"tile_start": "28R", "tile_end": "50R", "side": null}
+		
+	],
+	"S": [
+		{"tile_start": "10S", "tile_end": "18S", "side": "US"},
+		{"tile_start": "29S", "tile_end": "29S", "side": "US"},
+		{"tile_start": "30S", "tile_end": "31S", "side": null},
+		{"tile_start": "32S", "tile_end": "32S", "side": "US"},
+		{"tile_start": "33S", "tile_end": "50S", "side": null},
+		{"tile_start": "52S", "tile_end": "52S", "side": "USSR"},
+		{"tile_start": "53S", "tile_end": "54S", "side": null}
+	],
+	"T": [
+		{"tile_start": "10T", "tile_end": "20T", "side": "US"},
+		{"tile_start": "29T", "tile_end": "32T", "side": null},
+		{"tile_start": "33T", "tile_end": "33T", "side": "US"},
+		{"tile_start": "34T", "tile_end": "36T", "side": null},
+		{"tile_start": "37T", "tile_end": "53T", "side": "USSR"}
+	],
+	"U": [
+		{"tile_start": "9U", "tile_end": "21U", "side": "US"},
+		{"tile_start": "29U", "tile_end": "29U", "side": null},
+		{"tile_start": "30U", "tile_end": "30U", "side": "US"},
+		{"tile_start": "31U", "tile_end": "36U", "side": null},
+		{"tile_start": "47U", "tile_end": "54U", "side": "USSR"},
+		{"tile_start": "57U", "tile_end": "57U", "side": null}
+	],
+	"V": [
+		{"tile_start": "3V", "tile_end": "15V", "side": "US"},
+		{"tile_start": "22V", "tile_end": "23V", "side": "US"},
+		{"tile_start": "30V", "tile_end": "30V", "side": "US"},
+		{"tile_start": "32V", "tile_end": "36V", "side": "US"},
+		{"tile_start": "37V", "tile_end": "60V", "side": "USSR"}
+	],
+	"W": [
+		{"tile_start": "3W", "tile_end": "20W", "side": "US"},
+		{"tile_start": "22W", "tile_end": "26W", "side": "US"},
+		{"tile_start": "33W", "tile_end": "36W", "side": "US"},
+		{"tile_start": "37W", "tile_end": "60W", "side": "USSR"}
+	],
+	"X": [
+		{"tile_start": "10X", "tile_end": "27X", "side": "US"},
+		{"tile_start": "45X", "tile_end": "49X", "side": null}
+	]
+}
