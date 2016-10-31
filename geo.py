@@ -62,15 +62,28 @@ def in_mgrs_range(mgrs,start,end):
 
 def valid_placement(obj,mgrs,side):
 	land = json.loads(open('./objects/land.json').read())
-	m_obj = mgrs_to_object(mgrs)
-	if 'air' in obj['type']:
-		pass
-	elif 'sea' in obj['type']:
-		pass
-	elif 'land' in obj['type']:
-		pass
-	elif 'space' in json['type']:
-		
+	gzd = mgrs_to_object(mgrs)['grid_zone_designator']
+	if 'space' in obj['type']:
+		return 1
+	else:
+		for item in land[gzd[-1]]:
+			if in_mgrs_range(mgrs,item['start'],item['end']) and 'land' in obj['type']:
+				if item['side'] == side:
+					return 1
+				else:
+					return 2
+			elif 'air' in obj['type']:
+					if item['side'] == side:
+						return 1
+					else:
+						return 2
+			elif 'sea' in obj['type'] and not in_mgrs_range(mgrs,item['start'],item['end']):
+					if item['side'] == side:
+						return 1
+					else:
+						return 2
+		return -1
+
 def move(obj,from_mgrs,to_mgrs,rate):
 	pass
 

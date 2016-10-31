@@ -6,5 +6,6 @@
 		"radius": "360deg",
 		"range": "15km",
 		"bands": ["K","X"],
+		"resolution": "1deg"
 	}
 }

@@ -12,6 +12,32 @@ def init_db():
 	con.commit()
 	con.close()
 
+def generate_satellite_telemetry_frame(sensor_obj,id):
+	"""example
+	|@@@@@@@@@@@@@@@@@@@@@@@@|
+	|@@@@@@@@@@@@@@@@@@@@@@@@|
+	|@@@@@@@@@@@@@@@@@@@@@@@@|
+	|@@@@@@@@@@@@@@@@@@@@@@@@|
+	|@@@@@@@@@@@@@@@@@@@@@@@@|
+	|@@@@@@@@@@@@@@@@@@@@@@@@|
+	|@@@@@@@@@@@@@@@@@@@@@@@@|
+	|@@@@@@@@@@@@@@@@@@@@@@@@|
+	|@@@@@@@@@@@@@@@@@@@@@@@@|
+	|@@@@@@@@@@@@@@@@@@@@@@@@|
+	|@@@@@@@@@@@@@@@@@@@@@@@@|
+	"""
+	pass
+
+def generate_polar_telemetry_frame(sensor_obj,id):
+	"""example
+	\@@@@@@@@@@@@@@@@@@@@@@@@/
+	 \@@@@@@@@@@@@@@@@@@@@@@/
+	  \@@@@@@@@@@@@@@@@@@@@/
+	   \@@@@@@@@@@@@@@@@@@/
+	    \@@@@@@@@@@@@@@@@/
+	"""
+	pass
+
 @app.route('/')
 def index():
 	try:
@@ -53,6 +79,10 @@ def bot_create_country(country,key):
 			return str({"status": "error", "text": str(e)})+"\n"
 	else:
 		return str({"status": "error", "text": "Arguments invalid"})+"\n"
+
+@app.route('/telemetry/<id>/<key>')
+def stream_telemetry_data(id,key):
+
 
 app.add_url_rule('/geo/move/<thing>/<mgrs>/<rate>/<key>',)
 app.add_url_rule('/')
