@@ -4,7 +4,7 @@
  "sensor": {
  	"type": "satellite",
     "geostationary": true,
-    "resolution_per_tile": "3m",
+    "resolution_per_tile": "1m",
     "bands": ["visible","infrared"],
     "sq_size": "1km"
  }
