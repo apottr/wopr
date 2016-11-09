@@ -39,7 +39,8 @@ def generate_satellite_telemetry_frame(sensor_obj,id):
 				 "|@@@@@@@@@@@@@@@@@@@@@@@@|",
 				 "|@@@@@@@@@@@@@@@@@@@@@@@@|",
 				 "|@@@@@@@@@@@@@@@@@@@@@@@@|",
-				 ">>END TELEMETRY FRAME<<"])
+				 ">>END TELEMETRY FRAME<<\n"])
+	return t
 def generate_polar_telemetry_frame(sensor_obj,id):
 	#12 columns, 24 characters = 2 character space between columns (can widen if necessary)
 	col_indicies = [[1,2],[3,4],[5,6],[7,8],[9,10],[11,12],[13,14],[15,16],[17,18],[19,20],[21,22],[23,24]] #24 / 12
@@ -61,8 +62,8 @@ def generate_polar_telemetry_frame(sensor_obj,id):
 				 "|@@@@@@@@@@@@@@@@@@@@@@@@|",
 				 "|@@@@@@@@@@@@@@@@@@@@@@@@|",
 				 "|@@@@@@@@@@@@@@@@@@@@@@@@|",
-				 ">>END TELEMETRY FRAME<<"])
-	pass
+				 ">>END TELEMETRY FRAME<<\n"])
+	return t
 
 @app.route('/')
 def index():
@@ -108,10 +109,15 @@ def bot_create_country(country,key):
 
 @app.route('/telemetry/<id>/<key>')
 def stream_telemetry_data(id,key):
+	if id and key:
+		if id == "polar":
+			return generate_polar_telemetry_frame(0,0)
+		elif id == "satellite":
+			return generate_satellite_telemetry_frame(0,0)
+	else:
+		return str({"status": "error", "text": "Arguments invalid"})
 
 
-app.add_url_rule('/geo/move/<thing>/<mgrs>/<rate>/<key>',)
-app.add_url_rule('/')
 
 if __name__ == "__main__":
 	init_db()
