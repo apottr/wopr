@@ -2,7 +2,7 @@
 ===
 
 ## Executive Summary
-WOPR is a War Simulator. Currently set up to simulate global thermonuclear war between Soviet Russia and the United States like it's namesake, it will be able to be modified to facilitate simulations ranging from localized intranational squabbles to total global international war.
+WOPR is a War Simulator. Currently set up to simulate global thermonuclear war between Soviet Russia and the United States like it's namesake, it will be able to be modified to facilitate simulations ranging from localized intranational squabbles to total international thermonuclear warfare.
 
 ## Files
  - server.py
