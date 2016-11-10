@@ -111,9 +111,9 @@ def bot_create_country(country,key):
 def stream_telemetry_data(id,key):
 	if id and key:
 		if id == "polar":
-			return generate_polar_telemetry_frame(0,0)
+			return generate_polar_telemetry_frame(0,id)
 		elif id == "satellite":
-			return generate_satellite_telemetry_frame(0,0)
+			return generate_satellite_telemetry_frame(0,id)
 	else:
 		return str({"status": "error", "text": "Arguments invalid"})
 
