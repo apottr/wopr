@@ -92,14 +92,12 @@ def generate_new_key():
 	except Exception as e:
 		return str({"status": "error", "text": str(e)})+"\n"
 
-@app.route('/new_bot/country/<country>/<uuid:key>')
+@app.route('/new_bot/country/<country>/<key>')
 def bot_create_country(country,key):
-	if key and country and (country != 'ussr' or country != 'usa'):
+	if key and country and (country == 'ussr' or country == 'usa'):
 		try:
-
 			country = str(country)
 			key = str(key)
-
 			con = sqlite3.connect(database)
 			c = con.cursor()
 			c.execute('UPDATE general SET country=? WHERE key=?',(country,key))
@@ -109,15 +107,13 @@ def bot_create_country(country,key):
 		except Exception as e:
 			return str({"status": "error", "text": str(e)})+"\n"
 	else:
-		return str({"status": "error", "text": "Arguments invalid"})+"\n"
+		return str({"status": "error", "text": "Arguments invalid: Need key and country, and equal to 'ussr' or 'usa'"})+"\n"
 
 @app.route('/telemetry/<id>/<key>')
 def stream_telemetry_data(id,key):
 	if id and key:
-
 		id = str(id)
 		key = str(key)
-
 		if id == "polar":
 			return generate_polar_telemetry_frame(0,id)
 		elif id == "satellite":
